@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        orbitron: ['var(--font-orbitron)'],
+      },
       colors: {
         'synthwave': {
           'bg': '#0D0526',

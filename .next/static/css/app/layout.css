@@ -67,6 +67,22 @@
 }.__className_d65c78 {font-family: '__Inter_d65c78', '__Inter_Fallback_d65c78';font-style: normal
 }
 
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app/layout.tsx","import":"Orbitron","arguments":[{"subsets":["latin"],"variable":"--font-orbitron"}],"variableName":"orbitron"} ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* latin */
+@font-face {
+  font-family: '__Orbitron_9fd9c5';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(/_next/static/media/04ff47e1ca568747-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@font-face {font-family: '__Orbitron_Fallback_9fd9c5';src: local("Arial");ascent-override: 81.50%;descent-override: 19.59%;line-gap-override: 0.00%;size-adjust: 124.05%
+}.__className_9fd9c5 {font-family: '__Orbitron_9fd9c5', '__Orbitron_Fallback_9fd9c5';font-style: normal
+}.__variable_9fd9c5 {--font-orbitron: '__Orbitron_9fd9c5', '__Orbitron_Fallback_9fd9c5'
+}
+
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/globals.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
@@ -676,6 +692,9 @@ video {
 .inset-0 {
   inset: 0px;
 }
+.-bottom-1 {
+  bottom: -0.25rem;
+}
 .bottom-0 {
   bottom: 0px;
 }
@@ -701,6 +720,9 @@ video {
 .-mb-6 {
   margin-bottom: -1.5rem;
 }
+.mb-12 {
+  margin-bottom: 3rem;
+}
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -725,8 +747,8 @@ video {
 .mt-10 {
   margin-top: 2.5rem;
 }
-.mt-8 {
-  margin-top: 2rem;
+.mt-12 {
+  margin-top: 3rem;
 }
 .inline-block {
   display: inline-block;
@@ -757,6 +779,9 @@ video {
 }
 .h-64 {
   height: 16rem;
+}
+.h-\[2px\] {
+  height: 2px;
 }
 .h-full {
   height: 100%;
@@ -791,8 +816,15 @@ video {
 .flex-grow {
   flex-grow: 1;
 }
+.origin-left {
+  transform-origin: left;
+}
 .-rotate-2 {
   --tw-rotate: -2deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-x-0 {
+  --tw-scale-x: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform {
@@ -902,10 +934,10 @@ video {
   margin-right: calc(2.5rem * var(--tw-space-x-reverse));
   margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+.space-x-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
-  margin-right: calc(2rem * var(--tw-space-x-reverse));
-  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(3rem * var(--tw-space-x-reverse));
+  margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -926,6 +958,9 @@ video {
 }
 .border {
   border-width: 1px;
+}
+.border-b {
+  border-bottom-width: 1px;
 }
 .border-b-2 {
   border-bottom-width: 2px;
@@ -953,9 +988,6 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
-.bg-black\/50 {
-  background-color: rgb(0 0 0 / 0.5);
-}
 .bg-gray-900\/50 {
   background-color: rgb(17 24 39 / 0.5);
 }
@@ -970,9 +1002,16 @@ video {
 .bg-synthwave-bg\/30 {
   background-color: rgb(13 5 38 / 0.3);
 }
+.bg-synthwave-bg\/50 {
+  background-color: rgb(13 5 38 / 0.5);
+}
 .bg-synthwave-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(66 245 255 / var(--tw-bg-opacity, 1));
+}
+.bg-synthwave-pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 36 150 / var(--tw-bg-opacity, 1));
 }
 .bg-\[url\(\'\/synthwave-hackers\.png\'\)\] {
   background-image: url('/synthwave-hackers.png');
@@ -1125,9 +1164,6 @@ video {
 .pb-6 {
   padding-bottom: 1.5rem;
 }
-.pb-8 {
-  padding-bottom: 2rem;
-}
 .pt-32 {
   padding-top: 8rem;
 }
@@ -1136,6 +1172,9 @@ video {
 }
 .text-right {
   text-align: right;
+}
+.font-orbitron {
+  font-family: var(--font-orbitron);
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -1179,6 +1218,9 @@ video {
 .font-bold {
   font-weight: 700;
 }
+.font-medium {
+  font-weight: 500;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -1194,13 +1236,12 @@ video {
 .tracking-tighter {
   letter-spacing: -0.05em;
 }
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
-}
-.text-cyan-400 {
-  --tw-text-opacity: 1;
-  color: rgb(34 211 238 / var(--tw-text-opacity, 1));
 }
 .text-gray-300 {
   --tw-text-opacity: 1;
@@ -1382,11 +1423,6 @@ body {
   background-color: rgb(255 36 150 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:text-cyan-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(103 232 249 / var(--tw-text-opacity, 1));
-}
-
 .hover\:text-synthwave-pink:hover {
   --tw-text-opacity: 1;
   color: rgb(255 36 150 / var(--tw-text-opacity, 1));
@@ -1406,6 +1442,11 @@ body {
 
 .group:hover .group-hover\:translate-x-1 {
   --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-x-100 {
+  --tw-scale-x: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 

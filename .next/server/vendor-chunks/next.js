@@ -20,6 +20,16 @@ eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Inter_d6
 
 /***/ }),
 
+/***/ "(rsc)/./node_modules/next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Orbitron\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-orbitron\"}],\"variableName\":\"orbitron\"}":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"app/layout.tsx","import":"Orbitron","arguments":[{"subsets":["latin"],"variable":"--font-orbitron"}],"variableName":"orbitron"} ***!
+  \*******************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Orbitron_9fd9c5', '__Orbitron_Fallback_9fd9c5'\",\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_9fd9c5\",\n\t\"variable\": \"__variable_9fd9c5\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcImFwcC9sYXlvdXQudHN4XCIsXCJpbXBvcnRcIjpcIk9yYml0cm9uXCIsXCJhcmd1bWVudHNcIjpbe1wic3Vic2V0c1wiOltcImxhdGluXCJdLFwidmFyaWFibGVcIjpcIi0tZm9udC1vcmJpdHJvblwifV0sXCJ2YXJpYWJsZU5hbWVcIjpcIm9yYml0cm9uXCJ9IiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQSxXQUFXLHNGQUFzRjtBQUNqRztBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9ic2lkZXMtZncvLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP2JmNGQiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwic3R5bGVcIjoge1wiZm9udEZhbWlseVwiOlwiJ19fT3JiaXRyb25fOWZkOWM1JywgJ19fT3JiaXRyb25fRmFsbGJhY2tfOWZkOWM1J1wiLFwiZm9udFN0eWxlXCI6XCJub3JtYWxcIn0sXG5cdFwiY2xhc3NOYW1lXCI6IFwiX19jbGFzc05hbWVfOWZkOWM1XCIsXG5cdFwidmFyaWFibGVcIjogXCJfX3ZhcmlhYmxlXzlmZDljNVwiXG59O1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Orbitron\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-orbitron\"}],\"variableName\":\"orbitron\"}\n");
+
+/***/ }),
+
 /***/ "(ssr)/./node_modules/next/dist/api/link.js":
 /*!********************************************!*\
   !*** ./node_modules/next/dist/api/link.js ***!

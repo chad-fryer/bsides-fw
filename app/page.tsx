@@ -16,8 +16,7 @@ export default function Home() {
           <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-8 border border-synthwave-blue/20">
             <div className="text-right">
               <h1 className="text-6xl font-black uppercase tracking-tighter mb-4" style={{ textShadow: '2px 2px 8px rgba(66, 245, 255, 0.5), -2px -2px 8px rgba(66, 245, 255, 0.5)' }}>
-                <span className="text-synthwave-blue">BSides</span>{' '}
-                <span className="text-synthwave-blue">Fort Wayne</span>
+                <span className="text-synthwave-blue">BSidesFW</span>
                 <br />
                 <span className="text-synthwave-pink">2025</span>
               </h1>
@@ -42,10 +41,10 @@ export default function Home() {
           <div className="absolute -inset-1 bg-gradient-to-r from-synthwave-pink/20 via-synthwave-purple/20 to-synthwave-blue/20 rounded-lg blur-lg group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse" />
           <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-8 border border-synthwave-pink/20">
             <h2 className="text-4xl font-bold text-synthwave-pink mb-8" style={{ textShadow: '0 0 15px rgba(255, 66, 255, 0.5)' }}>
-              About BSides Fort Wayne
+              About BSidesFW
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              BSides Fort Wayne is a community-driven information security conference that brings together professionals, 
+              BSidesFW is a community-driven information security conference that brings together professionals, 
               enthusiasts, and newcomers to share knowledge, experience, and ideas. Our goal is to create an open environment 
               for learning and collaboration in the information security community.
             </p>

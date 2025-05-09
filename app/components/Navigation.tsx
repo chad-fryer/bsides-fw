@@ -17,25 +17,22 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-synthwave-bg/50 backdrop-blur-sm border-b border-synthwave-blue/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center h-16">
-          <div className="flex space-x-8">
-            <Link href="/" className="text-cyan-400 hover:text-cyan-300">
-              Home
-            </Link>
-            <Link href="/schedule" className="text-cyan-400 hover:text-cyan-300">
-              Schedule
-            </Link>
-            <Link href="/speakers" className="text-cyan-400 hover:text-cyan-300">
-              Speakers
-            </Link>
-            <Link href="/tickets" className="text-cyan-400 hover:text-cyan-300">
-              Tickets
-            </Link>
-            <Link href="/about" className="text-cyan-400 hover:text-cyan-300">
-              About
-            </Link>
+          <div className="flex space-x-12">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="font-orbitron text-synthwave-blue hover:text-synthwave-pink transition-colors duration-300 font-medium relative group tracking-wider text-lg"
+              >
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-synthwave-pink transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" 
+                  style={{ boxShadow: '0 0 10px rgba(255, 36, 150, 0.5)' }}
+                />
+              </Link>
+            ))}
           </div>
         </div>
       </div>

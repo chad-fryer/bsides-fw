@@ -9,19 +9,19 @@
 
 @keyframes glow {
   0%, 100% {
-    text-shadow: 0 0 5px #ec4899, 0 0 10px #ec4899;
+    text-shadow: 0 0 5px #FF2496, 0 0 10px #FF2496;
   }
   50% {
-    text-shadow: 0 0 8px #ec4899, 0 0 15px #ec4899;
+    text-shadow: 0 0 8px #FF2496, 0 0 15px #FF2496;
   }
 }
 
 @keyframes cyan-glow {
   0%, 100% {
-    text-shadow: 0 0 5px #22d3ee, 0 0 10px #22d3ee;
+    text-shadow: 0 0 5px #42F5FF, 0 0 10px #42F5FF;
   }
   50% {
-    text-shadow: 0 0 8px #22d3ee, 0 0 15px #22d3ee;
+    text-shadow: 0 0 8px #42F5FF, 0 0 15px #42F5FF;
   }
 }
 
@@ -30,7 +30,7 @@
 }
 
 .track-title {
-  @apply text-2xl font-bold mb-6 sticky top-0 z-10 text-pink-500 text-center;
+  @apply text-2xl font-bold mb-6 sticky top-0 z-10 text-synthwave-pink text-center py-2;
   animation: glow 3s ease-in-out infinite;
 }
 
@@ -41,27 +41,41 @@
 }
 
 .event-item {
-  @apply bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md text-gray-900 dark:text-white;
+  @apply bg-gray-900/70 backdrop-blur-sm rounded-lg p-3 border border-synthwave-blue/20 text-gray-300;
   margin: 2px;
   min-height: 4rem;
+  transition: all 0.3s ease;
+}
+
+.event-item:hover {
+  @apply border-synthwave-pink/30 shadow-neon-pink;
 }
 
 .event-item .time {
-  @apply text-sm text-gray-600 dark:text-gray-300;
+  @apply text-sm text-synthwave-blue;
 }
 
 .event-item .title {
-  @apply text-sm font-semibold mt-1 text-gray-900 dark:text-white;
+  @apply text-sm font-semibold mt-1 text-gray-300;
 }
 
 .event-item .duration {
-  @apply text-xs text-gray-500 dark:text-gray-400 mt-1;
+  @apply text-xs text-synthwave-purple mt-1;
 }
 
 .event-item.break {
-  @apply bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white;
+  @apply bg-gray-900/60 border-synthwave-purple/20;
 }
 
 .event-item.closed {
-  @apply bg-red-100 dark:bg-red-900/20 text-gray-900 dark:text-white;
+  @apply bg-gray-900/50 border-synthwave-pink/20 text-gray-400;
+}
+
+.event-item.keynote {
+  @apply border-synthwave-blue;
+  box-shadow: 0 0 10px rgba(66, 245, 255, 0.2);
+}
+
+.event-item.keynote:hover {
+  box-shadow: 0 0 20px rgba(66, 245, 255, 0.3);
 } 
