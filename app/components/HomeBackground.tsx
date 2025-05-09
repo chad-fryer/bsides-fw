@@ -8,11 +8,12 @@ const HomeBackground = React.memo(function HomeBackground() {
         <div className="relative w-full h-full">
           {/* Base illustration with parallax effect */}
           <div 
-            className="absolute inset-0 bg-[url('/synthwave-hackers.png')] bg-no-repeat bg-cover bg-center opacity-90 animate-float"
+            className="absolute inset-0 bg-[url('/synthwave-hackers.png')] bg-no-repeat bg-center opacity-90 animate-float"
             style={{
               backgroundAttachment: 'fixed',
               backgroundPosition: 'center',
-              backgroundSize: 'cover',
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
             }}
           />
           

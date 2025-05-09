@@ -4,31 +4,6 @@
 .schedule-container {
   display: grid;
   gap: 1rem;
-  grid-template-columns: auto repeat(4, minmax(250px, 1fr));
-}
-
-.time-labels {
-  display: grid;
-  grid-template-rows: repeat(37, minmax(4rem, auto));
-  align-items: start;
-}
-
-.time-label {
-  position: sticky;
-  left: 0px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  --tw-text-opacity: 1;
-  color: rgb(34 211 238 / var(--tw-text-opacity, 1));
-}
-
-.tracks-container {
-  grid-column: span 4 / span 4;
-  display: grid;
-  gap: 1rem;
   grid-template-columns: repeat(4, minmax(250px, 1fr));
 }
 
@@ -43,6 +18,19 @@
   50% {
     text-shadow: 0 0 8px #ec4899, 0 0 15px #ec4899;
   }
+}
+
+@keyframes cyan-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #22d3ee, 0 0 10px #22d3ee;
+  }
+  50% {
+    text-shadow: 0 0 8px #22d3ee, 0 0 15px #22d3ee;
+  }
+}
+
+.animate-glow {
+  animation: cyan-glow 3s ease-in-out infinite;
 }
 
 .track-title {
@@ -62,8 +50,8 @@
 .events-container {
   position: relative;
   display: grid;
-  grid-template-rows: repeat(37, minmax(4rem, auto));
-  min-height: calc(37 * 4rem);
+  grid-template-rows: repeat(73, minmax(2rem, auto));
+  min-height: calc(73 * 2rem);
 }
 
 .event-item {
@@ -139,12 +127,6 @@
     --tw-text-opacity: 1;
     color: rgb(156 163 175 / var(--tw-text-opacity, 1));
   }
-}
-
-.event-item.keynote {
-  border-left-width: 4px;
-  --tw-border-opacity: 1;
-  border-color: rgb(59 130 246 / var(--tw-border-opacity, 1));
 }
 
 .event-item.break {

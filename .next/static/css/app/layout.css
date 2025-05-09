@@ -689,10 +689,6 @@ video {
   left: 0px;
   right: 0px;
 }
-.inset-y-0 {
-  top: 0px;
-  bottom: 0px;
-}
 .-top-3 {
   top: -0.75rem;
 }
@@ -725,16 +721,6 @@ video {
 }
 .z-50 {
   z-index: 50;
-}
-.-m-1\.5 {
-  margin: -0.375rem;
-}
-.-m-2\.5 {
-  margin: -0.625rem;
-}
-.-my-6 {
-  margin-top: -1.5rem;
-  margin-bottom: -1.5rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -779,32 +765,23 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
-.block {
-  display: block;
-}
 .inline-block {
   display: inline-block;
 }
 .flex {
   display: flex;
 }
-.inline-flex {
-  display: inline-flex;
-}
 .table {
   display: table;
-}
-.flow-root {
-  display: flow-root;
 }
 .grid {
   display: grid;
 }
-.hidden {
-  display: none;
-}
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+.h-16 {
+  height: 4rem;
 }
 .h-32 {
   height: 8rem;
@@ -1048,6 +1025,11 @@ video {
   margin-right: calc(2.5rem * var(--tw-space-x-reverse));
   margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1066,9 +1048,6 @@ video {
 .overflow-hidden {
   overflow: hidden;
 }
-.overflow-y-auto {
-  overflow-y: auto;
-}
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1077,9 +1056,6 @@ video {
 }
 .rounded-lg {
   border-radius: 0.5rem;
-}
-.rounded-md {
-  border-radius: 0.375rem;
 }
 .rounded-none {
   border-radius: 0px;
@@ -1092,9 +1068,6 @@ video {
 }
 .border-b-2 {
   border-bottom-width: 2px;
-}
-.border-l {
-  border-left-width: 1px;
 }
 .border-t {
   border-top-width: 1px;
@@ -1148,9 +1121,6 @@ video {
 }
 .bg-synthwave-bg\/30 {
   background-color: rgb(13 5 38 / 0.3);
-}
-.bg-synthwave-bg\/90 {
-  background-color: rgb(13 5 38 / 0.9);
 }
 .bg-\[url\(\'\/synthwave-hackers\.png\'\)\] {
   background-image: url('/synthwave-hackers.png');
@@ -1261,20 +1231,11 @@ video {
 .to-transparent {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
-.bg-cover {
-  background-size: cover;
-}
 .bg-center {
   background-position: center;
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
-}
-.p-1\.5 {
-  padding: 0.375rem;
-}
-.p-2\.5 {
-  padding: 0.625rem;
 }
 .p-4 {
   padding: 1rem;
@@ -1285,10 +1246,6 @@ video {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1317,10 +1274,6 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 .py-8 {
   padding-top: 2rem;
@@ -1475,11 +1428,6 @@ video {
   --tw-blur: blur(4px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-.backdrop-blur-md {
-  --tw-backdrop-blur: blur(12px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
 .backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -1626,13 +1574,14 @@ body {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-synthwave-pink\/10:hover {
-  background-color: rgb(255 36 150 / 0.1);
-}
-
 .hover\:text-\[\#7FDBFF\]:hover {
   --tw-text-opacity: 1;
   color: rgb(127 219 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-cyan-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(103 232 249 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-synthwave-pink:hover {
@@ -1698,10 +1647,6 @@ body {
     height: 20rem;
   }
 
-  .sm\:max-w-sm {
-    max-width: 24rem;
-  }
-
   .sm\:justify-center {
     justify-content: center;
   }
@@ -1741,33 +1686,12 @@ body {
     margin-top: 6rem;
   }
 
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:hidden {
-    display: none;
-  }
-
   .lg\:max-w-none {
     max-width: none;
   }
 
-  .lg\:flex-1 {
-    flex: 1 1 0%;
-  }
-
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lg\:justify-end {
-    justify-content: flex-end;
-  }
-
-  .lg\:gap-x-12 {
-    -moz-column-gap: 3rem;
-         column-gap: 3rem;
   }
 
   .lg\:px-8 {

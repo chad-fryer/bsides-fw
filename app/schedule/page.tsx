@@ -11,8 +11,8 @@ export default function SchedulePage() {
     <main className="container mx-auto px-4 pt-32 pb-8">
       <h1 className="text-4xl font-bold text-center mb-8 text-cyan-400">Conference Schedule</h1>
       <Schedule />
-      <div className="mt-8 text-center text-cyan-400">
-        <p>Conference concludes at 5:00 PM</p>
+      <div className="mt-8 text-center">
+        <p className="text-2xl font-bold text-cyan-400 animate-glow">Conference concludes at 5:00 PM</p>
       </div>
     </main>
   )

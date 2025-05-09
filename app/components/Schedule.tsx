@@ -19,7 +19,8 @@ interface Track {
 function convertTimeToGridRow(time: string): number {
   const [hours, minutes] = time.split(':').map(Number)
   // Each 15-minute interval gets 1 row, starting from 8:00 AM (row 1)
-  return ((hours - 8) * 4) + Math.floor(minutes / 15) + 1
+  // We multiply by 2 to get more precise positioning (7.5-minute intervals)
+  return ((hours - 8) * 8) + Math.floor(minutes / 7.5) + 1
 }
 
 function parseTime(timeString: string): string {
@@ -42,7 +43,7 @@ function processEvents(events: Event[]): Event[] {
       startTime,
       endTime,
       gridRowStart: convertTimeToGridRow(startTime),
-      gridRowEnd: convertTimeToGridRow(endTime) + 1
+      gridRowEnd: convertTimeToGridRow(endTime)
     }
   })
 }
@@ -52,18 +53,18 @@ const scheduleData: Track[] = [
     name: "International Ballroom",
     events: [
       {
-        time: "8:15 AM - 9:15 AM",
+        time: "8:00 AM - 9:00 AM",
         title: "Doors Open / Registration",
         duration: "(60 mins)"
       },
       {
-        time: "9:15 AM - 10:00 AM",
+        time: "9:00 AM - 10:00 AM",
         title: "Opening Statements & Opening Keynote Chase Cunningham (Dr. Zero Trust)",
         duration: "(60 mins)",
         type: "keynote"
       },
       {
-        time: "10:15 AM - 11:00 AM",
+        time: "10:00 AM - 11:00 AM",
         title: "Brett Gilsinger: Making of the 2025 BSidesFW Badge Panel",
         duration: "(60 mins)"
       },
@@ -116,6 +117,11 @@ const scheduleData: Track[] = [
     name: "Classic Ballroom",
     events: [
       {
+        time: "9:00 AM - 10:00 AM",
+        title: "ROOMS CLOSED - KEYNOTE",
+        type: "closed"
+      },
+      {
         time: "10:00 AM - 10:30 AM",
         title: "Chuck Knox: Leveraging Remote Sensing Data and Machine Learning for Predicting Petroleum Deposits",
         duration: "(30 mins)"
@@ -134,6 +140,12 @@ const scheduleData: Track[] = [
         time: "11:30 AM - 12:00 PM",
         title: "Haris Qazi: Privacy in a world of Surveillance Capitalism",
         duration: "(30 mins)"
+      },
+      {
+        time: "12:00 PM - 1:00 PM",
+        title: "LUNCH - INTERNATIONAL BALLROOM",
+        duration: "(60 mins)",
+        type: "break"
       },
       {
         time: "1:00 PM - 1:30 PM",
@@ -187,9 +199,15 @@ const scheduleData: Track[] = [
         duration: "(30 mins)"
       },
       {
-        time: "1:00 PM - 1:30 PM",
+        time: "12:00 PM - 1:00 PM",
+        title: "LUNCH - INTERNATIONAL BALLROOM",
+        duration: "(60 mins)",
+        type: "break"
+      },
+      {
+        time: "1:00 PM - 2:00 PM",
         title: "Reet Kaur: Hacking the Machine: Unmasking the top 10 LLM Vulnerabilities & Real World Exploits",
-        duration: "(30 mins)"
+        duration: "(60 mins)"
       },
       {
         time: "2:00 PM - 2:30 PM",
@@ -212,7 +230,12 @@ const scheduleData: Track[] = [
     name: "CTF/Badge Hacking",
     events: [
       {
-        time: "1:00 PM - 4:00 PM",
+        time: "9:00 AM - 10:00 AM",
+        title: "ROOMS CLOSED - KEYNOTE",
+        type: "closed"
+      },
+      {
+        time: "10:00 AM - 4:00 PM",
         title: "CTF Open"
       },
       {
@@ -230,32 +253,8 @@ const processedScheduleData: Track[] = scheduleData.map(track => ({
 }))
 
 export default function Schedule() {
-  // Generate time labels for the grid
-  const timeLabels = []
-  for (let hour = 8; hour <= 17; hour++) {
-    for (let minute = 0; minute < 60; minute += 15) {
-      const period = hour >= 12 ? 'PM' : 'AM'
-      const displayHour = hour > 12 ? hour - 12 : hour
-      timeLabels.push({
-        time: `${displayHour}:${minute.toString().padStart(2, '0')} ${period}`,
-        gridRow: convertTimeToGridRow(`${hour}:${minute}`)
-      })
-    }
-  }
-
   return (
     <div className="schedule-container">
-      <div className="time-labels">
-        {timeLabels.map((label, index) => (
-          <div 
-            key={index}
-            className="time-label"
-            style={{ gridRow: label.gridRow }}
-          >
-            {label.time}
-          </div>
-        ))}
-      </div>
       {processedScheduleData.map((track, trackIndex) => (
         <div key={trackIndex} className="track">
           <h2 className="track-title">{track.name}</h2>
