@@ -47,9 +47,12 @@ export default function Footer() {
     <footer className="bg-black">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
-          {navigation.main.map((item) => (
+          {navigation.main.map((item, index) => (
             <div key={item.name} className="pb-6">
-              <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+              <Link
+                href={item.href}
+                className="text-sm leading-6 text-[#FFE600] hover:text-[#FF4B3E]"
+              >
                 {item.name}
               </Link>
             </div>
@@ -57,13 +60,17 @@ export default function Footer() {
         </nav>
         <div className="mt-10 flex justify-center space-x-10">
           {navigation.social.map((item) => (
-            <Link key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-[#7FDBFF] hover:text-white transition-colors"
+            >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </Link>
           ))}
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-400">
+        <p className="mt-10 text-center text-xs leading-5 text-[#FFE600]/80">
           &copy; {new Date().getFullYear()} BSides Fort Wayne. All rights reserved.
         </p>
       </div>
