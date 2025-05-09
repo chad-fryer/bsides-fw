@@ -4,23 +4,108 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-rgb: 0, 0, 0;
+  --background-rgb: 13, 5, 38;
+  --neon-pink: 255, 36, 150;
+  --neon-blue: 66, 245, 255;
+  --neon-purple: 187, 64, 255;
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(var(--neon-blue), 0.8),
+                 0 0 20px rgba(var(--neon-blue), 0.8),
+                 0 0 30px rgba(var(--neon-blue), 0.8);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(var(--neon-blue), 1),
+                 0 0 40px rgba(var(--neon-blue), 1),
+                 0 0 60px rgba(var(--neon-blue), 1);
+  }
+}
+
+html {
+  height: 100%;
+  background: rgb(var(--background-rgb));
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
   min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
 @layer base {
   h1 {
     @apply text-4xl font-bold tracking-tight sm:text-6xl;
+    color: rgb(var(--neon-blue));
+    animation: neonGlow 2s ease-in-out infinite alternate;
   }
   h2 {
     @apply text-3xl font-bold tracking-tight sm:text-4xl;
+    color: rgb(var(--neon-pink));
   }
   h3 {
     @apply text-2xl font-bold tracking-tight;
+    color: rgb(var(--neon-purple));
   }
+}
+
+.synthwave-card {
+  background: rgba(13, 5, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--neon-blue), 0.3);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(var(--neon-blue), 0.2);
+  transition: all 0.3s ease;
+}
+
+.synthwave-card:hover {
+  border-color: rgba(var(--neon-pink), 0.5);
+  box-shadow: 0 0 30px rgba(var(--neon-pink), 0.3);
+}
+
+.neon-button {
+  background: transparent;
+  border: 2px solid rgb(var(--neon-blue));
+  color: rgb(var(--neon-blue));
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px rgba(var(--neon-blue), 0.8);
+}
+
+.neon-button:hover {
+  background: rgba(var(--neon-blue), 0.1);
+  box-shadow: 0 0 20px rgba(var(--neon-blue), 0.4);
+}
+
+/* Synthwave-specific styles */
+.text-glow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+.neon-border {
+  position: relative;
+}
+
+.neon-border::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid currentColor;
+  border-radius: inherit;
+  opacity: 0.5;
+  animation: pulse 2s infinite;
+}
+
+.synthwave-shadow {
+  box-shadow: 
+    0 0 10px rgba(var(--neon-blue), 0.3),
+    0 0 20px rgba(var(--neon-pink), 0.2),
+    0 0 30px rgba(var(--neon-purple), 0.1);
 } 

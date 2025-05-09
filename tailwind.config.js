@@ -8,10 +8,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'synthwave': {
+          'bg': '#0D0526',
+          'pink': '#FF2496',
+          'blue': '#42F5FF',
+          'purple': '#BB40FF',
+        },
         'pop-yellow': '#FFE600',
         'pop-red': '#FF4B3E',
         'pop-blue': '#7FDBFF',
         'pop-black': '#000000',
+      },
+      boxShadow: {
+        'neon-pink': '0 0 20px rgba(255, 36, 150, 0.5)',
+        'neon-blue': '0 0 20px rgba(66, 245, 255, 0.5)',
+        'neon-purple': '0 0 20px rgba(187, 64, 255, 0.5)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -44,6 +55,10 @@ module.exports = {
         'pulse': {
           '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
           '50%': { opacity: '0.6', transform: 'scale(1.1)' },
+        },
+        'scanline': {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(100%)' },
         }
       },
       animation: {
@@ -53,6 +68,7 @@ module.exports = {
         'float': 'float 6s infinite ease-in-out',
         'glow': 'glow 2s infinite ease-in-out',
         'pulse': 'pulse 2s infinite ease-in-out',
+        'scanline': 'scanline 8s linear infinite',
       },
     },
   },
