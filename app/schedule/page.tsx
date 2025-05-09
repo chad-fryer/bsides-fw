@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import Schedule from '../components/Schedule'
 
 export const metadata: Metadata = {
-  title: 'Schedule | BSidesFW 2024',
-  description: 'Conference schedule for BSidesFW 2024',
+  title: 'Schedule | BSidesFW 2025',
+  description: 'Conference schedule for BSidesFW 2025',
 }
 
 export default function SchedulePage() {
