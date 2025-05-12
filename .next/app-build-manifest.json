@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/about/page": [
+    "/speakers/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
+      "static/chunks/app/speakers/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -25,22 +25,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
-    ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/schedule/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/schedule/page.css",
-      "static/chunks/app/schedule/page.js"
-    ],
-    "/tickets/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tickets/page.js"
     ]
   }
 }
