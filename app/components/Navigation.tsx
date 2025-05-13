@@ -4,6 +4,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useRouter } from 'next/navigation'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -15,6 +16,7 @@ const navigation = [
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
+  const router = useRouter()
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -23,6 +25,30 @@ export default function Navigation() {
     })
   }
 
+  const handleNavigation = (href: string) => {
+    if (href === '/') {
+      router.push(href)
+      scrollToTop()
+    }
+    setMobileMenuOpen(false)
+  }
+
+  // Handle click outside
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const menu = document.getElementById('mobile-menu')
+      const button = document.getElementById('menu-button')
+      if (mobileMenuOpen && menu && !menu.contains(event.target as Node) && button && !button.contains(event.target as Node)) {
+        setMobileMenuOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [mobileMenuOpen])
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-synthwave-bg/50 backdrop-blur-sm border-b border-synthwave-blue/20">
       <div className="container mx-auto px-4">
@@ -30,6 +56,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <div className="flex md:hidden">
             <button
+              id="menu-button"
               type="button"
               className="text-synthwave-blue hover:text-synthwave-pink transition-colors duration-300"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -63,23 +90,18 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       <div
+        id="mobile-menu"
         className={`${
           mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        } fixed inset-y-0 left-0 w-64 bg-synthwave-bg/95 backdrop-blur-sm transform transition-transform duration-300 ease-in-out md:hidden border-r border-synthwave-blue/20`}
+        } fixed inset-y-0 left-0 w-64 bg-synthwave-bg/75 transform transition-transform duration-300 ease-in-out md:hidden border-r border-synthwave-blue/20`}
       >
-        <div className="pt-20 pb-4 px-4">
+        <div className="pt-20 pb-4 px-4 bg-synthwave-bg/75">
           <div className="flex flex-col space-y-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                onClick={(e) => {
-                  if (item.href === '/') {
-                    e.preventDefault()
-                    scrollToTop()
-                  }
-                  setMobileMenuOpen(false)
-                }}
+                onClick={() => handleNavigation(item.href)}
                 className="font-orbitron text-synthwave-blue hover:text-synthwave-pink transition-colors duration-300 font-medium tracking-wider text-lg py-2"
               >
                 {item.name}
