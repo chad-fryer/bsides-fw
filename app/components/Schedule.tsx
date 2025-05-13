@@ -18,9 +18,8 @@ interface Track {
 
 function convertTimeToGridRow(time: string): number {
   const [hours, minutes] = time.split(':').map(Number)
-  // Each 15-minute interval gets 1 row, starting from 8:00 AM (row 1)
-  // We multiply by 2 to get more precise positioning (7.5-minute intervals)
-  return ((hours - 8) * 8) + Math.floor(minutes / 7.5) + 1
+  // Each 30-minute interval gets 2 rows, starting from 8:00 AM (row 1)
+  return ((hours - 8) * 4) + Math.floor(minutes / 15) + 1
 }
 
 function parseTime(timeString: string): string {

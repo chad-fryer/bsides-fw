@@ -1,6 +1,6 @@
 .schedule-container {
   @apply grid gap-4;
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, minmax(280px, 1fr));
 }
 
 .track {
@@ -36,15 +36,17 @@
 
 .events-container {
   @apply grid relative;
-  grid-template-rows: repeat(73, minmax(2rem, auto));
-  min-height: calc(73 * 2rem);
+  grid-template-rows: repeat(37, minmax(4rem, auto));
+  min-height: calc(37 * 4rem);
+  gap: 1px;
 }
 
 .event-item {
   @apply bg-gray-900/70 backdrop-blur-sm rounded-lg p-3 border border-synthwave-blue/20 text-gray-300;
-  margin: 2px;
   min-height: 4rem;
   transition: all 0.3s ease;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .event-item:hover {
@@ -57,6 +59,10 @@
 
 .event-item .title {
   @apply text-sm font-semibold mt-1 text-gray-300;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .event-item .duration {
