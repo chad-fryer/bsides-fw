@@ -136,6 +136,16 @@ In addition to his Bachelor's degree in Organizational Leadership from Millikin 
     imageUrl: '/speakers/speaker8.png',
     talkTitle: 'Making of the 2025 BSidesFW Badge Panel',
     talkDescription: '',
+  },
+  {
+    id: '10',
+    name: 'Michael Contino',
+    title: 'Principal Security Engineer',
+    company: 'Bark.co',
+    bio: `Michael Contino is an accomplished cybersecurity expert serving as the Principal Security Engineer at Bark.co, a leading dog products and services company. Specializing in vulnerability management, cloud security, and containerization. Michael excels in securing digital infrastructures for financial services and e-commerce sectors. His primary expertise lies in Linux-based environments, where he leverages advanced skills in secure architecture, data security and risk management. A graduate of the Indiana Institute of Technology with degrees in networking and information security, Michael holds the OSCP, LPIC-3 Security, is an exam developer for the Linux foundation, and on his way to completing the cloud native foundations  kubestronaut program. His career is driven by a passion for protecting organizational assets through culture-driven solutions and modern technical strategies.`,
+    imageUrl: '/speakers/speaker10.png',
+    talkTitle: 'From Code to Clicks: Transitioning to Low-Code Engineering and Its Impact on Information Security',
+    talkDescription: '',
   }
 ]
 
