@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import SpeakerCard from '../components/SpeakerCard'
 
 export const metadata: Metadata = {
-  title: 'Speakers | BSides Fort Worth 2024',
-  description: 'Meet our amazing lineup of speakers for BSides Fort Worth 2024',
+  title: 'Speakers | BSides Fort Wayne 2024',
+  description: 'Meet our amazing lineup of speakers for BSides Fort Wayne 2024',
 }
 
 interface Speaker {

@@ -81,7 +81,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-synthwave-purple">
-          &copy; {new Date().getFullYear()} BSides Fort Worth. All rights reserved.
+          &copy; {new Date().getFullYear()} BSides Fort Wayne. All rights reserved.
         </p>
       </div>
     </footer>
