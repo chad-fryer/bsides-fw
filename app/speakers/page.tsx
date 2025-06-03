@@ -146,6 +146,18 @@ In addition to his Bachelor's degree in Organizational Leadership from Millikin 
     imageUrl: '/speakers/speaker10.png',
     talkTitle: 'From Code to Clicks: Transitioning to Low-Code Engineering and Its Impact on Information Security',
     talkDescription: '',
+  },
+  {
+    id: '11',
+    name: 'Michael Miller',
+    title: 'Manager, Cybersecurity Platform Engineering',
+    company: 'Cardinal Health',
+    bio: `Michael is a seasoned cybersecurity leader, educator, and speaker with over 13 years of experience in enterprise security, networking, automation, and operations. With a strong focus on security engineering and talent development, he brings practical insight and technical depth to every discussion.
+
+Known for his engaging style and passion for empowering the next generation of cybersecurity professionals, Michael speaks on topics ranging from automation and security architecture to team development and career growth.`,
+    imageUrl: '/speakers/speaker11.jpeg',
+    talkTitle: 'Architecting Defensible Networks',
+    talkDescription: '',
   }
 ]
 
